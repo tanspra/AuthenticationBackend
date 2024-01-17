@@ -1,0 +1,26 @@
+{
+	"info": {
+		"_postman_id": "d2f35205-48ba-4360-ae3b-25499c8c7bca",
+		"name": "Admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32063643"
+	},
+	"item": [
+		{
+			"name": "greet",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "password"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{localhost}}/admin/"
+			},
+			"response": []
+		}
+	]
+}

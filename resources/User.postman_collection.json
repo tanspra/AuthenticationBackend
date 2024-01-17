@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "494f6604-6154-40ea-aca2-8b9f039b9a89",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32063643"
+	},
+	"item": [
+		{
+			"name": "greet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoicHJhc2hhbnQiLCJpYXQiOjE3MDU0ODkyMzgsInJvbGVzIjoiVVNFUiJ9.QjZugtBwWSfx5ibALRcYPAHmO1JCv8ZdlsPpoj-rpD3BLUJoVALdLBqkhgZBSgyhXN6tKLza--vVUIXVzgZxFmSh7FfvZ2BqY8J8Nl8Dpx1WTRzjokqnfMETcxgJceBmgSBnTE_mWQiVmpz_rdNDlaC73BoI5xw9rEkGOupFSsGp5IA0LSnc_zAMOor9G6WP8A2sGWABBkyscm4k3C8oyzgBG148MdBxj-s-yMada6B-_nyGknQQTx2dDW9Vx1efcFfDSvsaDfP5dgych-R6uzrX0BOLczNOQU5r8HPuk7q94oWc2J2s0sIkzfgIvfIgwED5HxvGEy67dP8qr6BEwg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{localhost}}/user/"
+			},
+			"response": []
+		},
+		{
+			"name": "registeruser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"prashant\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{localhost}}/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "loginUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Prashant\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{localhost}}/auth/login"
+			},
+			"response": []
+		}
+	]
+}

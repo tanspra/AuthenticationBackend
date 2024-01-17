@@ -13,7 +13,7 @@ import java.util.Collection;
 import java.util.Set;
 
 @Entity
-@Table(name="users")
+@Table(name = "users")
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Setter
@@ -22,14 +22,11 @@ public class ApplicationUser implements UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id")
     private Integer userId;
-    private String userName;
+    @Column(unique = true)
+    private String username;
     private String password;
-    @ManyToMany(fetch= FetchType.EAGER)
-    @JoinTable(
-        name = "user_role-junction",
-            joinColumns = {@JoinColumn(name="user_id")},
-            inverseJoinColumns = {@JoinColumn(name="role_id")}
-    )
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "user_role-junction", joinColumns = {@JoinColumn(name = "user_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")})
     private Set<Role> authorities;
 
     @Override
@@ -44,7 +41,7 @@ public class ApplicationUser implements UserDetails {
 
     @Override
     public String getUsername() {
-        return userName;
+        return this.username;
     }
 
     @Override
